@@ -81,3 +81,4 @@ C:\Users\bella\Documents\GitHub\quicheria_C-\SystemQuiche\obj\Debug\SystemQuiche
 C:\Users\bella\Documents\GitHub\quicheria_C-\SystemQuiche\obj\Debug\SystemQuiche.MDIPrincipal.resources
 C:\Users\bella\Documents\GitHub\quicheria_C-\SystemQuiche\obj\Debug\SystemQuiche.Properties.Resources.resources
 C:\Users\bella\Documents\GitHub\quicheria_C-\SystemQuiche\obj\Debug\SystemQuiche.csproj.GenerateResource.Cache
+C:\Users\bella\Documents\GitHub\quicheria_C-\SystemQuiche\obj\Debug\SystemQuiche.frmVendasRecord1.resources
