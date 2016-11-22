@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
@@ -303,8 +299,7 @@ namespace SystemQuiche
 
                     for (i = 1; i <= itmCnt + 1; i++)
                     {
-                        //Dim lst1 As New ListViewItem(i)
-                        //ListView1.Items(i).SubItems(0).Text = t
+                        
                         t = t + 1;
 
                     }
@@ -467,7 +462,7 @@ namespace SystemQuiche
             {
                 Cursor = Cursors.WaitCursor;
                 timer1.Enabled = true;
-                //rptInvoice rpt = new rptInvoice();
+                rptFatura rpt = new rptFatura();
                 //The report you created.
                 cmd = new SqlCommand();
                 SqlDataAdapter myDA = new SqlDataAdapter();
@@ -480,7 +475,7 @@ namespace SystemQuiche
                 myDA.SelectCommand = cmd;
                 myDA.Fill(myDS, "Invoice_Info");
                 myDA.Fill(myDS, "ProductSold");
-                //rpt.SetDataSource(myDS);
+                rpt.SetDataSource(myDS);
                 frmFaturaReport frm = new frmFaturaReport();
                 //frm.crystalReportViewer1.ReportSource = rpt;
                 frm.Visible = true;

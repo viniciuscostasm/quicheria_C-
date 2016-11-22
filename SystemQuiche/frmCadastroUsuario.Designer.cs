@@ -32,7 +32,6 @@
             this.btnVerificarDisponibilidade = new System.Windows.Forms.Button();
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtNumContato = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNomeUsuario = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnNovoCadastro = new System.Windows.Forms.Button();
+            this.txtNumContato = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,10 +55,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtNumContato);
             this.groupBox1.Controls.Add(this.btnVerificarDisponibilidade);
             this.groupBox1.Controls.Add(this.cmbTipoUsuario);
             this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtNumContato);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.txtNomeUsuario);
@@ -92,6 +92,10 @@
             this.cmbTipoUsuario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoUsuario.FormattingEnabled = true;
+            this.cmbTipoUsuario.Items.AddRange(new object[] {
+            "Admin",
+            "Caixa",
+            "Gerente"});
             this.cmbTipoUsuario.Location = new System.Drawing.Point(139, 68);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(172, 25);
@@ -104,13 +108,6 @@
             this.txtEmail.Size = new System.Drawing.Size(246, 24);
             this.txtEmail.TabIndex = 5;
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.Email_Validating);
-            // 
-            // txtNumContato
-            // 
-            this.txtNumContato.Location = new System.Drawing.Point(139, 181);
-            this.txtNumContato.Name = "txtNumContato";
-            this.txtNumContato.Size = new System.Drawing.Size(133, 24);
-            this.txtNumContato.TabIndex = 4;
             // 
             // txtNome
             // 
@@ -259,6 +256,14 @@
             this.btnNovoCadastro.UseVisualStyleBackColor = true;
             this.btnNovoCadastro.Click += new System.EventHandler(this.btnNovoCadastro_Click);
             // 
+            // txtNumContato
+            // 
+            this.txtNumContato.Location = new System.Drawing.Point(139, 178);
+            this.txtNumContato.Mask = "(999) 0000-0000";
+            this.txtNumContato.Name = "txtNumContato";
+            this.txtNumContato.Size = new System.Drawing.Size(118, 24);
+            this.txtNumContato.TabIndex = 4;
+            // 
             // frmCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -296,7 +301,6 @@
         private System.Windows.Forms.Button btnVerificarDisponibilidade;
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtNumContato;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtNomeUsuario;
@@ -306,5 +310,6 @@
         private System.Windows.Forms.Button btnAtualizarCadastro;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.MaskedTextBox txtNumContato;
     }
 }

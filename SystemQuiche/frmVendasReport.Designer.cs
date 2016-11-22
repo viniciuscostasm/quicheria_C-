@@ -28,13 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.CachedPageNumberPerDoc = 10;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(917, 541);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
             // frmVendasReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 541);
+            this.ClientSize = new System.Drawing.Size(917, 541);
+            this.Controls.Add(this.crystalReportViewer1);
             this.Name = "frmVendasReport";
             this.Text = "Relatório de Vendas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -43,5 +57,8 @@
         }
 
         #endregion
+
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+
     }
 }

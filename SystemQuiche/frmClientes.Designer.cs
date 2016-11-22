@@ -40,8 +40,6 @@
             this.txtClienteID = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtContato = new System.Windows.Forms.TextBox();
-            this.txtContatoAlt = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNotas = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.txtContato = new System.Windows.Forms.MaskedTextBox();
+            this.txtContatoAlt = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,24 +174,6 @@
             this.txtCidade.Size = new System.Drawing.Size(144, 20);
             this.txtCidade.TabIndex = 2;
             // 
-            // txtContato
-            // 
-            this.txtContato.BackColor = System.Drawing.Color.White;
-            this.txtContato.Location = new System.Drawing.Point(113, 220);
-            this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(119, 20);
-            this.txtContato.TabIndex = 3;
-            this.txtContato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContato_KeyPress);
-            // 
-            // txtContatoAlt
-            // 
-            this.txtContatoAlt.BackColor = System.Drawing.Color.White;
-            this.txtContatoAlt.Location = new System.Drawing.Point(347, 217);
-            this.txtContatoAlt.Name = "txtContatoAlt";
-            this.txtContatoAlt.Size = new System.Drawing.Size(119, 20);
-            this.txtContatoAlt.TabIndex = 4;
-            this.txtContatoAlt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContatoAlt_KeyPress);
-            // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
@@ -292,18 +274,36 @@
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
+            // txtContato
+            // 
+            this.txtContato.Location = new System.Drawing.Point(113, 218);
+            this.txtContato.Mask = "(999) 0000-0000";
+            this.txtContato.Name = "txtContato";
+            this.txtContato.Size = new System.Drawing.Size(100, 20);
+            this.txtContato.TabIndex = 80;
+            this.txtContato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContato_KeyPress_1);
+            // 
+            // txtContatoAlt
+            // 
+            this.txtContatoAlt.Location = new System.Drawing.Point(344, 218);
+            this.txtContatoAlt.Mask = "(999) 0000-0000";
+            this.txtContatoAlt.Name = "txtContatoAlt";
+            this.txtContatoAlt.Size = new System.Drawing.Size(100, 20);
+            this.txtContatoAlt.TabIndex = 81;
+            this.txtContatoAlt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContatoAlt_KeyPress_1);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(639, 447);
+            this.Controls.Add(this.txtContatoAlt);
+            this.Controls.Add(this.txtContato);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNotas);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtContatoAlt);
-            this.Controls.Add(this.txtContato);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtClienteID);
@@ -342,8 +342,6 @@
         internal System.Windows.Forms.TextBox txtClienteID;
         internal System.Windows.Forms.TextBox txtEndereco;
         internal System.Windows.Forms.TextBox txtCidade;
-        internal System.Windows.Forms.TextBox txtContato;
-        internal System.Windows.Forms.TextBox txtContatoAlt;
         internal System.Windows.Forms.TextBox txtEmail;
         internal System.Windows.Forms.TextBox txtNotas;
         private System.Windows.Forms.Label label9;
@@ -353,5 +351,7 @@
         internal System.Windows.Forms.Button btnNovo;
         internal System.Windows.Forms.Button btnDeletar;
         internal System.Windows.Forms.Button btnObterDados;
+        internal System.Windows.Forms.MaskedTextBox txtContato;
+        internal System.Windows.Forms.MaskedTextBox txtContatoAlt;
     }
 }

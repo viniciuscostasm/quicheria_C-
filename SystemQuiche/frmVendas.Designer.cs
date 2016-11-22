@@ -447,7 +447,6 @@
             this.txtTotalPago.BackColor = System.Drawing.Color.White;
             this.txtTotalPago.Location = new System.Drawing.Point(116, 150);
             this.txtTotalPago.Name = "txtTotalPago";
-            this.txtTotalPago.ReadOnly = true;
             this.txtTotalPago.Size = new System.Drawing.Size(81, 24);
             this.txtTotalPago.TabIndex = 2;
             this.txtTotalPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
